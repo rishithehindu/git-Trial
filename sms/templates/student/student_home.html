@@ -29,6 +29,7 @@
 
             <div class="bg-white shadow-lg rounded-xl p-6">
 
+
                 <h2 class="text-xl font-semibold mb-2">
                     {{ student.name }}
                 </h2>
@@ -43,17 +44,14 @@
 
                 <div class="flex gap-2">
 
-                    <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
-                        View
-                    </button>
 
-                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
-                        Edit
-                    </button>
+                    <a href="{% url 'update_student' student.id %}" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
+                        Update
+                    </a>
 
-                    <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                    <a href="{% url 'delete_student' student.id %}" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
                         Delete
-                    </button>
+                    </a>
 
                 </div>
 
